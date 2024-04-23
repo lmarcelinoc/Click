@@ -1,0 +1,19 @@
+pcm.!default {
+    type asym
+    playback.pcm {
+        type plug
+        slave.pcm "hw:2,0"
+        hint {
+            show on
+            description "My Application Playback"
+        }
+    }
+    capture.pcm {
+        type plug
+        slave.pcm "hw:3,0"
+        hint {
+            show on
+            description "My Application Capture"
+        }
+    }
+}
